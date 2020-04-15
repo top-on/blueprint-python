@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "hook-test"
+name = "python_blueprint"
 version = "0.1.0"
 description = ""
 authors = ["Thorben Jensen <jensen.thorben@gmail.com>"]
