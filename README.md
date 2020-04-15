@@ -18,20 +18,24 @@ This blueprint assumes you have the following tools installed:
     pip install --user cookiecutter
     ```
 
-2. Generate a Python package project:
+2. Generate a Python package project, then enter it:
 
     ```bash
     cookiecutter https://github.com/thorbenjensen/blueprint-python.git
     ```
 
-3. Install dependencies into a virtual environment with `Poetry`:
+3. Install dependencies into a virtual environment with `Poetry`, then activate it:
 
     ```bash
     poetry install
+    poetry shell
     ```
 
-4. Within that virtual environment, install Git hooks with `pre-commit`:
+4. Within that virtual environment, initialize Git repository and `pre-commit` hooks:
 
     ```bash
+    git init .
+    git add .
+    git commit -m "initial commit"
     pre-commit install
     ```
