@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "{{cookiecutter.project_slug}}"
+name = "{{ cookiecutter.project_slug }}"
 version = "0.1.0"
 description = ""
-authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
+authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
