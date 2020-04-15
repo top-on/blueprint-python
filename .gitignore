@@ -1,2 +1,5 @@
 # ide
 .vscode
+
+# python
+.mypy_cache
