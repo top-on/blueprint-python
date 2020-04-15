@@ -1,2 +1,7 @@
+def test():
+    return "test"
+    print("dead code")
+
+
 a = 2
-lsdfj = 42
+b: str = "a"
