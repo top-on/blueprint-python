@@ -29,3 +29,9 @@ This blueprint assumes you have the following tools installed:
     ```bash
     poetry install
     ```
+
+4. Within that virtual environment, install Git hooks with `pre-commit`:
+
+    ```bash
+    pre-commit install
+    ```
