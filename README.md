@@ -4,7 +4,7 @@ Cookiecutter blueprint for setting up Python projects.
 
 ## Prerequisites
 
-This blueprint assumes you have the following tools installed:
+This blueprint assumes you have the following tools set up:
 
 * [Pyenv](https://github.com/pyenv/pyenv)
 
