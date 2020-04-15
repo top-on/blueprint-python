@@ -16,7 +16,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "1.3.0"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "Classes Without Boilerplate"
 name = "attrs"
 optional = false
@@ -83,7 +83,7 @@ python-versions = "*"
 version = "0.3.0"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "Discover and load entry points from installed packages."
 name = "entrypoints"
 optional = false
@@ -91,7 +91,7 @@ python-versions = ">=2.7"
 version = "0.3"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "Removes commented-out code."
 name = "eradicate"
 optional = false
@@ -107,7 +107,7 @@ python-versions = "*"
 version = "3.0.12"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "the modular source code checker: pep8, pyflakes and co"
 name = "flake8"
 optional = false
@@ -121,7 +121,7 @@ pycodestyle = ">=2.5.0,<2.6.0"
 pyflakes = ">=2.1.0,<2.2.0"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "Flake8 plugin to find commented out code"
 name = "flake8-eradicate"
 optional = false
@@ -161,7 +161,7 @@ docs = ["sphinx", "rst.linker"]
 testing = ["packaging", "importlib-resources"]
 
 [[package]]
-category = "main"
+category = "dev"
 description = "McCabe checker, plugin for flake8"
 name = "mccabe"
 optional = false
@@ -273,7 +273,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "1.8.1"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "Python style guide checker"
 name = "pycodestyle"
 optional = false
@@ -281,7 +281,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "2.5.0"
 
 [[package]]
-category = "main"
+category = "dev"
 description = "passive checker of Python programs"
 name = "pyflakes"
 optional = false
@@ -414,7 +414,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "0fc2102be15e5d0ab79c2e70dee3deea45cbba35d71923ab63f78c9810292f63"
+content-hash = "58302fa928fd9195a8c5666a01b247df34253900cdd4e03c2f0e6335a600e435"
 python-versions = "^3.7"
 
 [metadata.files]
