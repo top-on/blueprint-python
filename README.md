@@ -30,11 +30,10 @@ This blueprint assumes you have the following tools set up:
     pyenv install `cat .python-version`
     ```
 
-4. Install dependencies into a virtual environment with `poetry`, then update and activate it:
+4. Install dependencies into a virtual environment with `poetry`, then activate it:
 
     ```bash
     poetry install
-    poetry update
     poetry shell
     ```
 
