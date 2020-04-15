@@ -1,6 +1,9 @@
+"""Test file."""
+
+
 def test():
+    print("no dead code")
     return "test"
-    print("dead code")
 
 
 a = 2
