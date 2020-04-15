@@ -2,4 +2,6 @@
 .vscode
 
 # python
+__pycache__
 .mypy_cache
+*.pyc
