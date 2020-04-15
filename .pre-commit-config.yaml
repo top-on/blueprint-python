@@ -9,3 +9,7 @@ repos:
     rev: 19.10b0
     hooks:
     -   id: black
+-   repo: https://github.com/broadinstitute/mirrors-pylama
+    rev: v1.0.1
+    hooks:
+    -   id: pylama
