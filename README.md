@@ -24,10 +24,11 @@ This blueprint assumes you have the following tools set up:
     cookiecutter https://github.com/thorbenjensen/blueprint-python.git
     ```
 
-3. Install dependencies into a virtual environment with `Poetry`, then activate it:
+3. Install dependencies into a virtual environment with `Poetry`, then update and activate it:
 
     ```bash
     poetry install
+    poetry update
     poetry shell
     ```
 
