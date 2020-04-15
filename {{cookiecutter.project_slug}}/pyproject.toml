@@ -6,14 +6,14 @@ authors = ["{{cookiecutter.full_name}} <{{cookiecutter.email}}>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-flake8-eradicate = "^0.3.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
 black = "^19.10b0"
-pre-commit = "^2.2.0"
 flake8 = "^3.7.9"
+flake8-eradicate = "^0.3.0"
 mypy = "^0.770"
+pre-commit = "^2.2.0"
+pytest = "^5.2"
 
 [build-system]
 requires = ["poetry>=0.12"]
