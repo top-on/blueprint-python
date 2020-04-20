@@ -1,0 +1,20 @@
+version: "3.7"
+services:
+
+  dev:
+    build: 
+      context: .
+      target: dev
+    image: dev_image
+    volumes:
+      - .:/home/root/.
+    command: /bin/bash
+    tty: true
+
+  prod:
+    build: 
+      context: .
+      target: prod
+    image: prod_image
+    command: /bin/bash
+    tty: true
