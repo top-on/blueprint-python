@@ -8,7 +8,7 @@ services:
     image: dev_image
     volumes:
       - .:/home/root/.
-    command: /bin/bash
+    command: bash -c "poetry run python"
     tty: true
 
   prod:
