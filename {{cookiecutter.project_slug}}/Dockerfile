@@ -11,9 +11,9 @@ WORKDIR /home/root/
 
 # dev with toml
 FROM base as dev
-COPY pyproject.toml .
+COPY pyproject.toml poetry.lock* ./
 RUN poetry install &&\
-    rm pyproject.toml
+    rm pyproject.toml poetry.lock
 
 # prod with lock
 FROM base as prod
