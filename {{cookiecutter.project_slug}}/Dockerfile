@@ -1,5 +1,5 @@
 # BASE
-FROM python:3.7.7 AS base
+FROM python:{{ cookiecutter.pyenv_python_version }} AS base
 
 # install poetry
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
