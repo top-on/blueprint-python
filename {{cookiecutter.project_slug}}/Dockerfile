@@ -9,13 +9,13 @@ ENV PATH = "${PATH}:/root/.poetry/bin"
 
 WORKDIR /home/root/
 
-# dev with toml
+# DEV with pyproject.toml and optional lock-file
 FROM base as dev
 COPY pyproject.toml poetry.lock* ./
 RUN poetry install &&\
     rm pyproject.toml poetry.lock
 
-# prod with lock
+# PROD with pyproject.toml and lock-file
 FROM base as prod
 COPY . .
 RUN poetry install --no-dev
