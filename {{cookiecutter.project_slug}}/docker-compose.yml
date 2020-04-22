@@ -2,7 +2,7 @@ version: "3.7"
 services:
 
   dev:
-    build: 
+    build:
       context: .
       target: dev
     image: dev_image
@@ -12,7 +12,7 @@ services:
     tty: true
 
   prod:
-    build: 
+    build:
       context: .
       target: prod
     image: prod_image
