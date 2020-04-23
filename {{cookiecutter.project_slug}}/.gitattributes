@@ -1,0 +1,2 @@
+# this enforces unix-friendly 'lf' line endings at all git commits
+* text=auto eol=lf
