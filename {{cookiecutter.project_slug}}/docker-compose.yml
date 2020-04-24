@@ -11,6 +11,18 @@ services:
     command: bash -c "poetry run python"
     tty: true
 
+  dev-jupyter:
+    build: 
+      context: .
+      target: dev
+    image: dev_image
+    ports:
+      - 8888:8888
+    volumes:
+      - .:/home/root/.
+    command: bash -c "poetry run jupyter notebook --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.disable_check_xsrf=True --NotebookApp.token=''"
+    tty: true
+
   prod:
     build:
       context: .
