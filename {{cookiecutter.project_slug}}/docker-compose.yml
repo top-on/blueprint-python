@@ -8,6 +8,7 @@ services:
     image: dev_image
     volumes:
       - .:/home/root/.
+      - vscode-extensions:/root/.vscode-server/extensions
     command: bash -c "poetry run python"
     tty: true
 
@@ -20,6 +21,7 @@ services:
       - 8888:8888
     volumes:
       - .:/home/root/.
+      - vscode-extensions:/root/.vscode-server/extensions
     command: bash -c "poetry run jupyter notebook --ip=0.0.0.0 --allow-root --no-browser --NotebookApp.disable_check_xsrf=True --NotebookApp.token=''"
     tty: true
 
@@ -30,3 +32,6 @@ services:
     image: prod_image
     command: /bin/bash
     tty: true
+
+volumes:
+  vscode-extensions:
