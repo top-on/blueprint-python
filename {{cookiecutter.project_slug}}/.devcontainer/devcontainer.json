@@ -29,7 +29,8 @@
 		"ms-python.python",
 		"njpwerner.autodocstring",
 		"mhutchie.git-graph",
-		"ms-pyright.pyright"
+		"eamodio.gitlens",
+		"mutantdino.resourcemonitor"
 	],
 
 	// Uncomment the next line if you want start specific services in your Docker Compose config.

@@ -11,6 +11,10 @@ WORKDIR /home/root/
 
 # DEV with pyproject.toml and optional lock-file
 FROM base as dev
+# Create VsCode extension folder for consistent volumne mount
+# https://code.visualstudio.com/docs/remote/containers-advanced#_avoiding-extension-reinstalls-on-container-rebuild 
+RUN mkdir -p root/.vscode-server/extensions
+
 COPY pyproject.toml poetry.lock* ./
 RUN poetry install &&\
     rm pyproject.toml poetry.lock
