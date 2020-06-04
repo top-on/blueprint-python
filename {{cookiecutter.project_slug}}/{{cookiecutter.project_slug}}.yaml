@@ -1,0 +1,51 @@
+# Docker
+# Build and push an image to Azure Container Registry
+# https://docs.microsoft.com/azure/devops/pipelines/languages/docker
+
+trigger:
+  - master
+  
+  resources:
+  - repo: self
+  
+  variables:
+    # Container registry service connection established during pipeline creation
+    dockerRegistryServiceConnection: '' #TODO add key for your docker registry
+    imageRepository: '{{cookiecutter.project_slug}}'
+    dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
+    tag: '$(Build.BuildId)'
+    DOCKER_BUILDKIT: 1
+  
+    # Agent VM image name
+    vmImageName: 'ubuntu-latest'
+  
+  stages:
+  - stage: Build
+    displayName: Build, test and push stage
+    jobs:
+    - job: build_application
+      pool:
+        vmImage: $(vmImageName)
+      steps:
+      - task: Docker@2
+        displayName: Build docker image
+        inputs:
+          repository: $(imageRepository)
+          containerRegistry: $(dockerRegistryServiceConnection)
+          command: 'build'
+          Dockerfile: '**/Dockerfile'
+          arguments: '-t $(imageRepository) --target prod'
+          tags: 'latest'
+      - task: Bash@3
+        displayName: Run application tests
+        inputs:
+          targetType: 'inline'
+          script: 'docker container run -v /home/root/:/home/root/azure-test-artifacts/ $(imageRepository) bash -c ''bin/test-app.sh'''
+      - task: Docker@2
+        displayName: Push tested docker image
+        inputs:
+          repository: $(imageRepository)
+          containerRegistry: $(dockerRegistryServiceConnection)
+          command: 'push'
+          tags: 'latest'
+  
