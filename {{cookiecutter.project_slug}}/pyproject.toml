@@ -11,6 +11,9 @@ authors = ["{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>"]
 
 [tool.poetry.dependencies]
 python = "{{ cookiecutter.pyenv_python_version }}"
+pytest = "^5.2"
+pytest-azurepipelines = "^0.8.0"
+pytest-cov = "^2.9.0"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
@@ -18,7 +21,6 @@ flake8 = "^3.7.9"
 flake8-eradicate = "^0.3.0"
 mypy = "^0.770"
 pre-commit = "^2.2.0"
-pytest = "^5.2"
 jupyter = "^1.0.0"
 
 [build-system]
